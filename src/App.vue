@@ -1,28 +1,55 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <div id="main-wrapper">
+        <!-- header header  -->
+        <TopBar/>
+        <!-- End header header -->
+
+
+        <!-- Left Sidebar  -->
+        <LeftMenu/>
+        <!-- End Left Sidebar  -->
+
+
+        <!-- Page wrapper  -->
+        <div class="page-wrapper">
+            <!-- Bread crumb -->
+            <Breadcrumb/>
+            <!-- End Bread crumb -->
+            <!-- Container fluid  -->
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-6">
+                        <TableDeadline/>
+                    </div>
+                </div>
+            </div>
+            <!-- End Container fluid  -->
+            <!-- footer -->
+            <footer class="footer">© 2018 All rights reserved. Created by Davy</footer>
+            <!-- End footer -->
+        </div>
+        <!-- End Page wrapper  -->
+    </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import Breadcrumb from './components/Navigation/Breadcrumb.vue'
+import LeftMenu from './components/Navigation/LeftMenu.vue'
+import TopBar from './components/Navigation/TopBar.vue'
+
+import TableDeadline from './components/TableDeadline.vue'
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+	components: {
+		Breadcrumb,
+        LeftMenu,
+        TopBar,
+        TableDeadline
+	}
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
